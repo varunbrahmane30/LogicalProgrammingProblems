@@ -8,7 +8,8 @@ namespace D6LogicalProblems
         {
             Console.WriteLine("Logical Programs");
             //FebonacciSeries.calFebonacciSeries();
-            PerfectNumber.calPerfectNumber();
+            //PerfectNumber.calPerfectNumber();
+            PrimeNumber.checkPrimeNUm();
             Console.ReadKey();
         }
     }
