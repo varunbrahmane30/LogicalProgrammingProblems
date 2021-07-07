@@ -7,7 +7,8 @@ namespace D6LogicalProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Logical Programs");
-            FebonacciSeries.calFebonacciSeries();
+            //FebonacciSeries.calFebonacciSeries();
+            PerfectNumber.calPerfectNumber();
             Console.ReadKey();
         }
     }
