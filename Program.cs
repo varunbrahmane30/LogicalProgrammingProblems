@@ -10,7 +10,8 @@ namespace D6LogicalProblems
             //FebonacciSeries.calFebonacciSeries();
             //PerfectNumber.calPerfectNumber();
             //PrimeNumber.checkPrimeNUm();
-            ReverseNUmber.checkReverseNumber();
+            //ReverseNUmber.checkReverseNumber();
+            CoupanNumber.calDistinctNumber();
             Console.ReadKey();
         }
     }
