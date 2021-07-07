@@ -9,7 +9,8 @@ namespace D6LogicalProblems
             Console.WriteLine("Logical Programs");
             //FebonacciSeries.calFebonacciSeries();
             //PerfectNumber.calPerfectNumber();
-            PrimeNumber.checkPrimeNUm();
+            //PrimeNumber.checkPrimeNUm();
+            ReverseNUmber.checkReverseNumber();
             Console.ReadKey();
         }
     }
