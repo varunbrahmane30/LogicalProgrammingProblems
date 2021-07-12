@@ -11,7 +11,8 @@ namespace D6LogicalProblems
             //PerfectNumber.calPerfectNumber();
             //PrimeNumber.checkPrimeNUm();
             //ReverseNUmber.checkReverseNumber();
-            CoupanNumber.calDistinctNumber();
+            //CoupanNumber.calDistinctNumber();
+            Stopwatch.stopwatchPeogram();
             Console.ReadKey();
         }
     }
