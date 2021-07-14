@@ -6,44 +6,66 @@ namespace D6LogicalProblems
 {
     class CoupanNumber
     {
-        public static int generateRandom()
+        private static int totalCoupans;
+        private static int count = 0;
+        public static int generateaRandom()
         {
+            count++;
             Random random = new Random();
-            int value = random.Next(1,100);
-            return value;
-                  
+            return random.Next(0,100);
         }
-
+        
+        public static void printArray(int[] arr)
+        {
+          
+            for ( int i=0;i<arr.Length;i++)
+            {
+                Console.Write( arr[i] +"  ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------------------------------------------------");
+        }
         public static void calDistinctNumber()
         {
-            // taking user input 
-            Console.WriteLine("Enter a 5 coupan Number between (1 to 100) : ");
-            int number5 = int.Parse(Console.ReadLine());
-            int number1 = int.Parse(Console.ReadLine());
-            int number2 = int.Parse(Console.ReadLine());
-            int number3= int.Parse(Console.ReadLine());
-            int number4= int.Parse(Console.ReadLine());
+            
 
-            Console.WriteLine();
-            Console.WriteLine("....... Genrating Coupans Numbers ........");
-            Console.WriteLine();
+            // ask user for input
 
-            // implementation 
-            int i = 0;
-            while ( i<=100 )
+            Console.Write("Enter How many Coupans you want to Generate :   ");
+            totalCoupans = int.Parse(Console.ReadLine());
+
+            // array declaration
+
+            int[] arr = new int[totalCoupans];                   // array used for total number of coupans.
+            int size = arr.Length;
+            int[] arr2 = new int[size];                           // array used to store new coupan       
+            
+
+            for (int i = 0; i < size; i++)
             {
-                i++;
-                int digit = generateRandom();
+                int value = generateaRandom();
+                arr[i] = value;
+            }
 
-                if( digit == number1 || digit == number2 || digit == number3 || digit == number4 || digit == number5)
+            Console.WriteLine("---------------------------------------------------------------------------------------");
+            Console.WriteLine("Tokens are : ");
+            printArray(arr);
+            
+            for (int i = 0; i < size; i++)
+            {
+                int newvalue = generateaRandom();
+               
+                if( arr[i] != newvalue)
                 {
-                    Console.WriteLine("   Its a existing coupan code :: " + digit);
-                }
-                else
-                {
-                    Console.WriteLine("   New Coupan Number:  " + digit);
+                    arr2[i] = newvalue;
+                    
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------------------------------------------------------------");
+            Console.WriteLine("Newly Generated Tokens are :  ");
+            printArray(arr2);
+            Console.WriteLine("Total random number needed to have all distinct numbers is : " + count);
 
         }
     }
